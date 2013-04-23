@@ -20,6 +20,7 @@
 		EA4487D817264683005C6F30 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4487D617264683005C6F30 /* MainStoryboard_iPad.storyboard */; };
 		EA4487DB17264683005C6F30 /* machismoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487DA17264683005C6F30 /* machismoViewController.m */; };
 		EA4487E617264A31005C6F30 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E517264A31005C6F30 /* Card.m */; };
+		EA4487E917264E84005C6F30 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E817264E84005C6F30 /* Deck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +41,10 @@
 		EA4487D717264683005C6F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		EA4487D917264683005C6F30 /* machismoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machismoViewController.h; sourceTree = "<group>"; };
 		EA4487DA17264683005C6F30 /* machismoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machismoViewController.m; sourceTree = "<group>"; };
-		EA4487E417264A31005C6F30 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = ElMachismo/Model/Card.h; sourceTree = "<group>"; };
-		EA4487E517264A31005C6F30 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = ElMachismo/Model/Card.m; sourceTree = "<group>"; };
+		EA4487E417264A31005C6F30 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
+		EA4487E517264A31005C6F30 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
+		EA4487E717264E84005C6F30 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Model/Deck.h; sourceTree = "<group>"; };
+		EA4487E817264E84005C6F30 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Model/Deck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +64,7 @@
 		EA4487AF17264683005C6F30 = {
 			isa = PBXGroup;
 			children = (
-				EA4487E417264A31005C6F30 /* Card.h */,
-				EA4487E517264A31005C6F30 /* Card.m */,
+				EA4487EA17264E8D005C6F30 /* Model */,
 				EA4487C117264683005C6F30 /* ElMachismo */,
 				EA4487BA17264683005C6F30 /* Frameworks */,
 				EA4487B917264683005C6F30 /* Products */,
@@ -113,6 +115,18 @@
 				EA4487D117264683005C6F30 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA4487EA17264E8D005C6F30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA4487E417264A31005C6F30 /* Card.h */,
+				EA4487E517264A31005C6F30 /* Card.m */,
+				EA4487E717264E84005C6F30 /* Deck.h */,
+				EA4487E817264E84005C6F30 /* Deck.m */,
+			);
+			name = Model;
+			path = ElMachismo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,7 @@
 				EA4487CC17264683005C6F30 /* machismoAppDelegate.m in Sources */,
 				EA4487DB17264683005C6F30 /* machismoViewController.m in Sources */,
 				EA4487E617264A31005C6F30 /* Card.m in Sources */,
+				EA4487E917264E84005C6F30 /* Deck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
