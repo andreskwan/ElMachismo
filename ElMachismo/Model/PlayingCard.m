@@ -12,8 +12,12 @@
 
 - (NSString * )contents
 {
-    //not a good idea because you can't control A, J, Q, K
-    return [NSString stringWithFormat:@"%d%@", self.rank, self.suit];
+    //2
+    //control what to display at 0-?, 10-J, 11-Q, 12-K
+    NSArray *rankStrings = @[@"?", @"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"J",@"Q",@"K"];
+    return [rankStrings[self.rank] stringByAppendingString:self.suit];
+ 
+
     
 }
 
