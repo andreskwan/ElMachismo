@@ -21,6 +21,7 @@
 		EA4487DB17264683005C6F30 /* machismoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487DA17264683005C6F30 /* machismoViewController.m */; };
 		EA4487E617264A31005C6F30 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E517264A31005C6F30 /* Card.m */; };
 		EA4487E917264E84005C6F30 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E817264E84005C6F30 /* Deck.m */; };
+		EA44881F17295781005C6F30 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44881E17295781005C6F30 /* PlayingCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		EA4487E517264A31005C6F30 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
 		EA4487E717264E84005C6F30 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Model/Deck.h; sourceTree = "<group>"; };
 		EA4487E817264E84005C6F30 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Model/Deck.m; sourceTree = "<group>"; };
+		EA44881D17295781005C6F30 /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCard.h; path = Model/PlayingCard.h; sourceTree = "<group>"; };
+		EA44881E17295781005C6F30 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 		EA4487EA17264E8D005C6F30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA44881D17295781005C6F30 /* PlayingCard.h */,
+				EA44881E17295781005C6F30 /* PlayingCard.m */,
 				EA4487E417264A31005C6F30 /* Card.h */,
 				EA4487E517264A31005C6F30 /* Card.m */,
 				EA4487E717264E84005C6F30 /* Deck.h */,
@@ -202,6 +207,7 @@
 				EA4487DB17264683005C6F30 /* machismoViewController.m in Sources */,
 				EA4487E617264A31005C6F30 /* Card.m in Sources */,
 				EA4487E917264E84005C6F30 /* Deck.m in Sources */,
+				EA44881F17295781005C6F30 /* PlayingCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
