@@ -22,6 +22,13 @@
 }
 
 
+
+- (NSString *)suit
+{
+    //to avoid to return 0 or nil
+    return _suit ? _suit : @"?";
+}
+
 //to avoid that someone set something different than valid suits
 - (void)setSuit:(NSString *)suit
 {
