@@ -22,7 +22,13 @@
 - (IBAction)flipCard:(UIButton *)sender
 {
     sender.selected = !sender.isSelected;
+    self.flipcount++;
 }
 
+- (void)setFlipcount:(int)flipcount
+{
+    _flipcount = flipcount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d",self.flipcount];
+}
 
 @end
