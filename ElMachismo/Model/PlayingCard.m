@@ -20,7 +20,7 @@
 
     
 }
-
+@synthesize suit = _suit;
 
 
 - (NSString *)suit
