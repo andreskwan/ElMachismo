@@ -9,6 +9,9 @@
 #import "machismoViewController.h"
 
 @interface machismoViewController ()
+//weak because this is displayed, this class do not control it
+//is strong by the view
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 
 @end
 

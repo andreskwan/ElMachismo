@@ -30,13 +30,26 @@
                                     <action selector="flipCard:" destination="2" eventType="touchUpInside" id="lNz-1k-yrQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3c-Ja-i4m">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="hvc-T0-JuW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L9o-6e-gos" firstAttribute="top" secondItem="3" secondAttribute="top" constant="183" id="ED2-Ri-xfL"/>
+                            <constraint firstAttribute="bottom" secondItem="v3c-Ja-i4m" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="WGP-Uz-BWW"/>
                             <constraint firstItem="L9o-6e-gos" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="e02-Bi-rmJ"/>
+                            <constraint firstItem="v3c-Ja-i4m" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mxb-1r-1BG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="flipsLabel" destination="v3c-Ja-i4m" id="Nik-de-U1J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,6 +61,10 @@
         </class>
         <class className="machismoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/machismoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
