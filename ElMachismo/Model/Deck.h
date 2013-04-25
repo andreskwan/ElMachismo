@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "Card.h"
+
 @interface Deck : NSObject
 
+//addCard:atTop
 - (void)addCard:(Card *)card atTop:(BOOL)atTop;
 
 - (Card *)drawRandomCard;

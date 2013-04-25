@@ -16,6 +16,8 @@
 //TODO what makes that a card is playable or not?
 @property (nonatomic, getter = isUnplayable) BOOL unpleyable;
 
+
+//its not going to modigy the otherCards so that is why is a NSArray
 - (int)match:(NSArray *)otherCards;
 
 

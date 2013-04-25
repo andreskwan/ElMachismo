@@ -8,6 +8,8 @@
 
 #import "Deck.h"
 @interface Deck()
+//strong no one should point at it
+//mutable because we are going to add things to it
 @property (strong, nonatomic) NSMutableArray *cards;
 @end
 
@@ -16,21 +18,32 @@
 
 @implementation Deck
 
+//lazy instantiation
+//cards getter
+//alocate and initialize the array
 -(NSMutableArray *)cards
 {
+    //if true returns a blank allocated array
     if (!_cards) _cards = [[NSMutableArray alloc] init];
+    
     return _cards;
 }
 
 
+//what if the card I'm passing is nil?
+// in an array is wrong, it's going to crash
+// sending messages to nil does nothing
 -(void)addCard:(Card *)card atTop:(BOOL)atTop
 {
-    if (atTop) {
-        //self.cards initilized to nil
-        //sending messages to nil does nothing
-        [self.cards insertObject:card atIndex:0];
-    }else {
-        [self.cards addObject:card];
+    //verify if card is nil
+    if (card) {
+        if (atTop) {         
+            //sending message insertObject:atIndex
+            //if self.cards is nil then does nothing
+            [self.cards insertObject:card atIndex:0];
+        }else {
+            [self.cards addObject:card];
+        }
     }
 }
 
