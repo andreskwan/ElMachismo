@@ -16,11 +16,7 @@
 
 - (IBAction)flipCard:(UIButton *)sender
 {
-    if (sender.isSelected) {
-        sender.selected = NO;
-    }else{
-        sender.selected = YES;
-    }
+    sender.selected = !sender.isSelected;
 }
 
 
