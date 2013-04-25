@@ -14,7 +14,7 @@
 {
     //2
     //control what to display at 0-?, 10-J, 11-Q, 12-K
-    NSArray *rankStrings = @[@"?", @"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"J",@"Q",@"K"];
+    NSArray *rankStrings = [PlayingCard rankStrings];
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
    
 }
@@ -40,5 +40,11 @@
 + (NSArray *)validSuits
 {
     return @[@"♥", @"♦",@"♠",@"♣"];
+}
+
+#pragma mark rank property
++ (NSArray *)rankStrings
+{
+    return @[@"?", @"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"J",@"Q",@"K"];
 }
 @end
