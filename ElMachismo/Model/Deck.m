@@ -50,10 +50,13 @@
 - (Card *)drawRandomCard
 {
     Card *randomCard = nil;
-    
+
+    //you can't remove from a blank array so verify
     if (self.cards.count) {
         unsigned index = arc4random() % self.cards.count;
+        //draw card
         randomCard = self.cards[index];
+        //remove it from the array
         [self.cards removeObjectAtIndex:index];       
     }
     return randomCard;
