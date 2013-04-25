@@ -21,4 +21,12 @@
     
 }
 
+
+//to avoid that someone set something different than valid suits
+- (void)setSuit:(NSString *)suit
+{
+    if ([@[@"♥", @"♦",@"♠",@"♣"] containsObject:suit]) {
+        _suit = suit;
+    }
+}
 @end
