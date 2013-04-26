@@ -16,6 +16,12 @@
 
 @implementation CardMatchingGame
 
+- (NSMutableArray *)cards
+{
+    if (!_cards) _cards = [[NSMutableArray alloc]init];
+    return _cards;
+}
+
 //draw out cards from the deck
 //and store them is an structure
 //which hold the playable cards
