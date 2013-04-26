@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 com.stanfor. All rights reserved.
 //
 
-#import "machismoViewController.h"
+#import "CardGameViewController.h"
 
-@interface machismoViewController ()
+@interface CardGameViewController ()
 //weak because this is displayed, this class do not control it
 //is strong by the view
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation machismoViewController
+@implementation CardGameViewController
 
 - (IBAction)flipCard:(UIButton *)sender
 {

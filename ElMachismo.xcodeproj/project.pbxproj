@@ -18,7 +18,7 @@
 		EA4487D217264683005C6F30 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4487D117264683005C6F30 /* Default-568h@2x.png */; };
 		EA4487D517264683005C6F30 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4487D317264683005C6F30 /* MainStoryboard_iPhone.storyboard */; };
 		EA4487D817264683005C6F30 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4487D617264683005C6F30 /* MainStoryboard_iPad.storyboard */; };
-		EA4487DB17264683005C6F30 /* machismoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487DA17264683005C6F30 /* machismoViewController.m */; };
+		EA4487DB17264683005C6F30 /* CardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487DA17264683005C6F30 /* CardGameViewController.m */; };
 		EA4487E617264A31005C6F30 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E517264A31005C6F30 /* Card.m */; };
 		EA4487E917264E84005C6F30 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E817264E84005C6F30 /* Deck.m */; };
 		EA44881F17295781005C6F30 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44881E17295781005C6F30 /* PlayingCard.m */; };
@@ -41,8 +41,8 @@
 		EA4487D117264683005C6F30 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EA4487D417264683005C6F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		EA4487D717264683005C6F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		EA4487D917264683005C6F30 /* machismoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machismoViewController.h; sourceTree = "<group>"; };
-		EA4487DA17264683005C6F30 /* machismoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machismoViewController.m; sourceTree = "<group>"; };
+		EA4487D917264683005C6F30 /* CardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardGameViewController.h; sourceTree = "<group>"; };
+		EA4487DA17264683005C6F30 /* CardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardGameViewController.m; sourceTree = "<group>"; };
 		EA4487E417264A31005C6F30 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
 		EA4487E517264A31005C6F30 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
 		EA4487E717264E84005C6F30 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Model/Deck.h; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 			children = (
 				EA4487D317264683005C6F30 /* MainStoryboard_iPhone.storyboard */,
 				EA4487D617264683005C6F30 /* MainStoryboard_iPad.storyboard */,
-				EA4487D917264683005C6F30 /* machismoViewController.h */,
-				EA4487DA17264683005C6F30 /* machismoViewController.m */,
+				EA4487D917264683005C6F30 /* CardGameViewController.h */,
+				EA4487DA17264683005C6F30 /* CardGameViewController.m */,
 				EA4487C217264683005C6F30 /* Supporting Files */,
 			);
 			path = ElMachismo;
@@ -209,7 +209,7 @@
 			files = (
 				EA4487C817264683005C6F30 /* main.m in Sources */,
 				EA4487CC17264683005C6F30 /* machismoAppDelegate.m in Sources */,
-				EA4487DB17264683005C6F30 /* machismoViewController.m in Sources */,
+				EA4487DB17264683005C6F30 /* CardGameViewController.m in Sources */,
 				EA4487E617264A31005C6F30 /* Card.m in Sources */,
 				EA4487E917264E84005C6F30 /* Deck.m in Sources */,
 				EA44881F17295781005C6F30 /* PlayingCard.m in Sources */,
