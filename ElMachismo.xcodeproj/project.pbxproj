@@ -102,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				EA4487D317264683005C6F30 /* MainStoryboard_iPhone.storyboard */,
-				EA50D2D4172AB263008F8CEE /* CardMatchingGame.h */,
-				EA50D2D5172AB263008F8CEE /* CardMatchingGame.m */,
 				EA4487D917264683005C6F30 /* CardGameViewController.h */,
 				EA4487DA17264683005C6F30 /* CardGameViewController.m */,
 				EA4487C217264683005C6F30 /* Supporting Files */,
@@ -133,6 +131,8 @@
 			children = (
 				EA4487E417264A31005C6F30 /* Card.h */,
 				EA4487E517264A31005C6F30 /* Card.m */,
+				EA50D2D4172AB263008F8CEE /* CardMatchingGame.h */,
+				EA50D2D5172AB263008F8CEE /* CardMatchingGame.m */,
 				EA4487E717264E84005C6F30 /* Deck.h */,
 				EA4487E817264E84005C6F30 /* Deck.m */,
 				EA44881D17295781005C6F30 /* PlayingCard.h */,
