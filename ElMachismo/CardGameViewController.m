@@ -11,10 +11,11 @@
 @interface CardGameViewController ()
 //weak because this is displayed, this class do not control it
 //is strong by the view
-@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (weak, nonatomic) IBOutlet UILabel                        *flipsLabel;
 //counts flips
-@property (nonatomic)int                     flipcount;
+@property (nonatomic)int                                            flipcount;
 
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray  *cardButtons;
 @end
 
 @implementation CardGameViewController

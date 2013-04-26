@@ -99,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				EA4487D317264683005C6F30 /* MainStoryboard_iPhone.storyboard */,
-				EA4487D617264683005C6F30 /* MainStoryboard_iPad.storyboard */,
 				EA4487D917264683005C6F30 /* CardGameViewController.h */,
 				EA4487DA17264683005C6F30 /* CardGameViewController.m */,
 				EA4487C217264683005C6F30 /* Supporting Files */,
@@ -110,6 +109,7 @@
 		EA4487C217264683005C6F30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA4487D617264683005C6F30 /* MainStoryboard_iPad.storyboard */,
 				EA4487CA17264683005C6F30 /* machismoAppDelegate.h */,
 				EA4487CB17264683005C6F30 /* machismoAppDelegate.m */,
 				EA4487C317264683005C6F30 /* ElMachismo-Info.plist */,

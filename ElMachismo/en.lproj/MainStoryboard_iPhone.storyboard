@@ -255,14 +255,34 @@
                     </view>
                     <connections>
                         <outlet property="flipsLabel" destination="v3c-Ja-i4m" id="Nik-de-U1J"/>
+                        <outletCollection property="cardButtons" destination="L9o-6e-gos" id="9Rz-Zu-At0"/>
+                        <outletCollection property="cardButtons" destination="fEQ-Av-JhR" id="SH2-qv-okc"/>
+                        <outletCollection property="cardButtons" destination="9Go-ty-NSG" id="3pI-c6-sTm"/>
+                        <outletCollection property="cardButtons" destination="e9R-xc-fe9" id="qq5-RK-fB2"/>
+                        <outletCollection property="cardButtons" destination="Q9R-Br-syc" id="YNo-Sg-cmR"/>
+                        <outletCollection property="cardButtons" destination="Zlb-nn-IYi" id="rwR-CJ-UZF"/>
+                        <outletCollection property="cardButtons" destination="3cG-93-O9t" id="h6A-x7-tSc"/>
+                        <outletCollection property="cardButtons" destination="sBG-TR-KQo" id="mE1-DL-0ns"/>
+                        <outletCollection property="cardButtons" destination="Yyf-wd-ZbC" id="BNg-HR-lyD"/>
+                        <outletCollection property="cardButtons" destination="TZS-pO-dA1" id="0bZ-Fp-lBa"/>
+                        <outletCollection property="cardButtons" destination="lfl-cE-23Z" id="Ofj-zg-D03"/>
+                        <outletCollection property="cardButtons" destination="FdI-Or-Q7f" id="BIY-Mw-KqK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="118"/>
+            <point key="canvasLocation" x="633" y="98"/>
         </scene>
     </scenes>
     <classes>
+        <class className="CardGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
+                <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
