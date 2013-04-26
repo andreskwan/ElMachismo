@@ -126,14 +126,14 @@
 		EA4487EA17264E8D005C6F30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA448820172968E7005C6F30 /* PlayingCardDeck.h */,
-				EA448821172968E7005C6F30 /* PlayingCardDeck.m */,
-				EA44881D17295781005C6F30 /* PlayingCard.h */,
-				EA44881E17295781005C6F30 /* PlayingCard.m */,
 				EA4487E417264A31005C6F30 /* Card.h */,
 				EA4487E517264A31005C6F30 /* Card.m */,
 				EA4487E717264E84005C6F30 /* Deck.h */,
 				EA4487E817264E84005C6F30 /* Deck.m */,
+				EA44881D17295781005C6F30 /* PlayingCard.h */,
+				EA44881E17295781005C6F30 /* PlayingCard.m */,
+				EA448820172968E7005C6F30 /* PlayingCardDeck.h */,
+				EA448821172968E7005C6F30 /* PlayingCardDeck.m */,
 			);
 			name = Model;
 			path = ElMachismo;
@@ -348,6 +348,7 @@
 				EA4487E017264683005C6F30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
