@@ -21,7 +21,7 @@
 //convenience initializers
 
 //what should I do with the inherited initilializer
-//write it and return nil
+//OVERRIDE it and return nil
 
 //others will set the information to start a new game
 //like
