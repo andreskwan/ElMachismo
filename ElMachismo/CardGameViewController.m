@@ -7,6 +7,8 @@
 //
 
 #import "CardGameViewController.h"
+#import "Deck.h"
+#import "PlayingCardDeck.h"
 
 @interface CardGameViewController ()
 //weak because this is displayed, this class do not control it
@@ -16,10 +18,26 @@
 @property (nonatomic)int                                            flipcount;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray  *cardButtons;
+
+@property (strong, nonatomic) Deck                                  *deck;
 @end
 
 @implementation CardGameViewController
 
+- (Deck *)deck
+{
+    if (!_deck) _deck = [[PlayingCardDeck alloc]init];
+    return _deck;
+}
+
+- (void)setCardButtons:(NSArray *)cardButtons
+{
+    _cardButtons = cardButtons;
+    for (UIButton * cardButton  in self.cardButtons) {
+        Card * card = [self.deck drawRandomCard];
+        [cardButton setTitle:card.contents forState:UIControlStateSelected];
+    }
+}
 - (IBAction)flipCard:(UIButton *)sender
 {
     sender.selected = !sender.isSelected;
