@@ -35,9 +35,15 @@
     if (self) {
         for (int i = 0; i < count; i++) {
             Card *card = [deck drawRandomCard];
+            //if count > deck size we have a malformed card-matching game
+            //so we want to return nill from our init
+            //because we can't initialize, given the arguments that were past
             if (!card) {
                 self = nil;
+                //do not continue
+                break;
             }else{
+                //NSMutableArray will crash if card is nil
                 self.cards[i] = card;
             }
         }
