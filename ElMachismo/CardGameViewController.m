@@ -20,7 +20,7 @@
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray  *cardButtons;
 
-@property (strong, nonatomic) Deck                                  *deck;
+
 
 //it's very frequent to have a property that points to the model
 @property (strong, nonatomic) CardMatchingGame                      *game;
@@ -30,22 +30,16 @@
 
 - (CardMatchingGame *)game
 {
+    //no strong pointer to the deck, is just needed to take the playing cards, no more
     if (_game) _game = [[CardMatchingGame alloc] initWIthCardCount:[self.cardButtons count]
-                                                         usingDeck:self.deck];
+                                                         usingDeck:[[PlayingCardDeck alloc]init]];
 }
-- (Deck *)deck
-{
-    if (!_deck) _deck = [[PlayingCardDeck alloc]init];
-    return _deck;
-}
+
 
 - (void)setCardButtons:(NSArray *)cardButtons
 {
     _cardButtons = cardButtons;
-    for (UIButton * cardButton  in self.cardButtons) {
-        Card * card = [self.deck drawRandomCard];
-        [cardButton setTitle:card.contents forState:UIControlStateSelected];
-    }
+    
 }
 - (IBAction)flipCard:(UIButton *)sender
 {
