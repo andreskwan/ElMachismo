@@ -23,9 +23,10 @@
     return _cards;
 }
 
+//protect agains index bigger than the size of the array
 - (Card *)cardAtIndex:(NSUInteger)index
 {
-    return self.cards [index];
+    return (index < [self.cards count]) ? self.cards [index] : nil;
 }
 
 //draw out cards from the deck
