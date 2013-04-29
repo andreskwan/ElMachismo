@@ -30,28 +30,48 @@
 
 - (CardMatchingGame *)game
 {
+//    NSLog(@"[self.cardButtons count]: %d",[self.cardButtons count]);
     //no strong pointer to the deck, is just needed to take the playing cards, no more
-    if (_game) _game = [[CardMatchingGame alloc] initWIthCardCount:[self.cardButtons count]
+    if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                          usingDeck:[[PlayingCardDeck alloc]init]];
-}
-
-//common method, used to make the view, match the model.
-//common paradime
-- (void)updateUI
-{
-    
+    return _game;
 }
 
 - (void)setCardButtons:(NSArray *)cardButtons
 {
     _cardButtons = cardButtons;
-
     [self updateUI];
     
 }
+
+//common method, used to make the view, match the model.
+//it has to comunicate with the model to update the view!
+//common paradime
+- (void)updateUI
+{
+    for (UIButton * cardButton in self.cardButtons) {
+        Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
+        //the card did match but are not enable any more so we have to add
+        [cardButton setTitle:card.contents forState:UIControlStateSelected];
+        [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
+        cardButton.selected = card.isFaceUp;
+        cardButton.enabled = !card.isUnplayable;
+        cardButton.alpha = (card.isUnplayable ? 0.3 : 1.0);
+    }
+    
+}
+
+
+
+- (void)setFlipcount:(int)flipcount
+{
+    _flipcount = flipcount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d",self.flipcount];
+}
+
 - (IBAction)flipCard:(UIButton *)sender
 {
-        //this is wrong, because is the model which decides wich buttons are in the selected state
+    //this is wrong, because is the model which decides wich buttons are in the selected state
     //tell my model
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     self.flipcount++;
@@ -59,10 +79,6 @@
     [self updateUI];
 }
 
-- (void)setFlipcount:(int)flipcount
-{
-    _flipcount = flipcount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d",self.flipcount];
-}
+
 
 @end

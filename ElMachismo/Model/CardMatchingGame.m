@@ -29,9 +29,12 @@
 //the gust of the app
 - (void)flipCardAtIndex:(NSUInteger)index
 {
+  
+    
     Card * card = [self cardAtIndex:index];
-    if (card && !card.isUnplayable) {
-        if (card.isFaceUp) {
+    
+    if (!card.isUnplayable) {
+        if (!card.isFaceUp) {
             //toogle the state
             for (Card * otherCard in self.cards) {
                 if (otherCard.isFaceUp && !otherCard.isUnplayable) {
@@ -47,7 +50,6 @@
                     break;
                 }
             }
-
         }
         self.score -= FLIP_COST;
         card.faceUp = !card.isFaceUp;
@@ -63,7 +65,7 @@
 //draw out cards from the deck
 //and store them is an structure
 //which hold the playable cards
-- (id)initWIthCardCount:(NSUInteger)count
+- (id)initWithCardCount:(NSUInteger)count
               usingDeck:(Deck *)deck
 {
     //I need to call my super's designated initializer
@@ -76,7 +78,7 @@
             //if count > deck size we have a malformed card-matching game
             //so we want to return nill from our init
             //because we can't initialize, given the arguments that were past
-            if (!card) {
+            if (!card) {                
                 self = nil;
                 //do not continue
                 break;

@@ -29,7 +29,7 @@
 //- deck to play with
 //because this class can't know with which deck do you want to play
 //and with how many cards!!!
-- (id)initWIthCardCount:(NSUInteger)count
+- (id)initWithCardCount:(NSUInteger)count
               usingDeck:(Deck *)deck;
 
 //this method does all the work
