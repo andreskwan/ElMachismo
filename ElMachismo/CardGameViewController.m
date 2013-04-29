@@ -54,8 +54,9 @@
         //this is wrong, because is the model which decides wich buttons are in the selected state
     //tell my model
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
-    sender.selected = !sender.isSelected;
     self.flipcount++;
+    //I have to update my ui every time I flip a card
+    [self updateUI];
 }
 
 - (void)setFlipcount:(int)flipcount
