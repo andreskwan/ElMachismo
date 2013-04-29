@@ -35,10 +35,16 @@
                                                          usingDeck:[[PlayingCardDeck alloc]init]];
 }
 
+- (void)updateUI
+{
+    
+}
 
 - (void)setCardButtons:(NSArray *)cardButtons
 {
     _cardButtons = cardButtons;
+    //common method, used to make the view, match the model. 
+    [self updateUI];
     
 }
 - (IBAction)flipCard:(UIButton *)sender
