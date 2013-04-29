@@ -22,7 +22,7 @@
 
 
 
-//it's very frequent to have a property that points to the model
+//MODEL - it's very frequent to have a property that points to the model
 @property (strong, nonatomic) CardMatchingGame                      *game;
 @end
 
@@ -35,6 +35,8 @@
                                                          usingDeck:[[PlayingCardDeck alloc]init]];
 }
 
+//common method, used to make the view, match the model.
+//common paradime
 - (void)updateUI
 {
     
@@ -43,12 +45,15 @@
 - (void)setCardButtons:(NSArray *)cardButtons
 {
     _cardButtons = cardButtons;
-    //common method, used to make the view, match the model. 
+
     [self updateUI];
     
 }
 - (IBAction)flipCard:(UIButton *)sender
 {
+        //this is wrong, because is the model which decides wich buttons are in the selected state
+    //tell my model
+    [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     sender.selected = !sender.isSelected;
     self.flipcount++;
 }
