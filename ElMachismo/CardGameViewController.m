@@ -39,6 +39,7 @@
 
 - (void)setCardButtons:(NSArray *)cardButtons
 {
+    //its kind of magic hear how cardButtons are instantiated!!! Now I understand!
     _cardButtons = cardButtons;
     [self updateUI];
     
