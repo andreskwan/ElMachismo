@@ -10,16 +10,22 @@
 
 @interface CardMatchingGame()
 @property (readwrite, nonatomic) int        score;
-@property (strong,nonatomic) NSMutableArray * cards; //just for cards
+@property (strong,nonatomic) NSMutableArray * cards; //just for card
 
 @end
 
 @implementation CardMatchingGame
 
+//lazy instantiation
 - (NSMutableArray *)cards
 {
     if (!_cards) _cards = [[NSMutableArray alloc]init];
     return _cards;
+}
+
+- (Card *)cardAtIndex:(NSUInteger)index
+{
+    return self.cards [index];
 }
 
 //draw out cards from the deck
