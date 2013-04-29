@@ -23,6 +23,37 @@
     return _cards;
 }
 
+#define MATCH_BONUS 4
+#define MISMATCH_PENALTY 2
+#define FLIP_COST 1
+//the gust of the app
+- (void)flipCardAtIndex:(NSUInteger)index
+{
+    Card * card = [self cardAtIndex:index];
+    if (card && !card.isUnplayable) {
+        if (card.isFaceUp) {
+            //toogle the state
+            for (Card * otherCard in self.cards) {
+                if (otherCard.isFaceUp && !otherCard.isUnplayable) {
+                    int matchScore = [card match:@[otherCard]];
+                    if (matchScore) {
+                        otherCard.unpleyable = YES;
+                        card.unpleyable = YES;
+                        self.score += matchScore * MATCH_BONUS;
+                    }else{
+                        otherCard.faceUp = NO;
+                        self.score += matchScore * MISMATCH_PENALTY;
+                    }
+                    break;
+                }
+            }
+
+        }
+        self.score -= FLIP_COST;
+        card.faceUp = !card.isFaceUp;
+    }
+}
+
 //protect agains index bigger than the size of the array
 - (Card *)cardAtIndex:(NSUInteger)index
 {

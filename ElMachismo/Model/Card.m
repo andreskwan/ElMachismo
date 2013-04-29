@@ -10,7 +10,8 @@
 
 @implementation Card
 
-
+//never is going to find a match with just one deck
+//all the 52 cards are differen!
 - (int)match:(NSArray *)otherCards
 {
     int score = 0;
