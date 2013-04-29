@@ -9,6 +9,7 @@
 #import "CardGameViewController.h"
 #import "Deck.h"
 #import "PlayingCardDeck.h"
+#import "CardMatchingGame.h"
 
 @interface CardGameViewController ()
 //weak because this is displayed, this class do not control it
@@ -20,10 +21,18 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray  *cardButtons;
 
 @property (strong, nonatomic) Deck                                  *deck;
+
+//it's very frequent to have a property that points to the model
+@property (strong, nonatomic) CardMatchingGame                      *game;
 @end
 
 @implementation CardGameViewController
 
+- (CardMatchingGame *)game
+{
+    if (_game) _game = [[CardMatchingGame alloc] initWIthCardCount:[self.cardButtons count]
+                                                         usingDeck:self.deck];
+}
 - (Deck *)deck
 {
     if (!_deck) _deck = [[PlayingCardDeck alloc]init];
