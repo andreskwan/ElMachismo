@@ -7,11 +7,52 @@
 //
 
 #import "machismoAppDelegate.h"
+#import "PlayingCard.h"
 
 @implementation machismoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    PlayingCard * cardA = [[PlayingCard alloc]init];
+    PlayingCard * cardB = [[PlayingCard alloc]init];
+    PlayingCard * cardC = [[PlayingCard alloc]init];
+    [cardA setSuit:@"♣"];
+    [cardB setSuit:@"♥"];
+    [cardC setSuit:@"♥"];
+    //[cardC setSuit:@"♠"];
+    [cardA setRank:10];
+    [cardB setRank:11];
+    [cardC setRank:12];
+
+
+    cardA.contents = @[cardB.contents, cardC.contents][[cardB match:@[cardC]] ? 1 : 0];
+    
+    NSLog(@"cardA.contents: %@",cardA.contents);
+    NSLog(@"cardB.contents: %@",cardB.contents);
+    NSLog(@"cardC.contents: %@",cardC.contents);
+    
+    cardA.contents = @[cardB.contents, cardC.contents][0];
+    NSLog(@"cardA.contents: %@",cardA.contents);
+    
+    cardA.contents = cardC.contents;
+    NSLog(@"cardA.contents: %@",cardA.contents);
+    
+    
+    [cardA setContents:@[cardB.contents, cardC.contents][0]];
+    NSLog(@"cardA.contents: %@",cardA.contents);
+    
+    cardA.contents = [cardB match:@[cardC]] ? cardC.contents : cardB.contents;
+    NSLog(@"cardA.contents: %@",cardA.contents);
+    
+    cardA.contents = @"K♥";
+    NSLog(@"cardA.contents: %@",cardA.contents);
+    
+    cardA.contents = [NSString stringWithFormat:@"%@", cardB.contents];
+    NSLog(@"cardA.contents: %@",cardA.contents);
+    
+    [cardA setSuit:@"♠"];
+    NSLog(@"cardA.contents: %@",cardA.contents);
     // Override point for customization after application launch.
     return YES;
 }
