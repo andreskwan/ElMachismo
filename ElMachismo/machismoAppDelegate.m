@@ -7,51 +7,68 @@
 //
 
 #import "machismoAppDelegate.h"
+#import "Card.h"
 #import "PlayingCard.h"
 
 @implementation machismoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    
+//    PlayingCard * cardA = [[PlayingCard alloc]init];
+//    PlayingCard * cardB = [[PlayingCard alloc]init];
+//    PlayingCard * cardC = [[PlayingCard alloc]init];
+//    [cardA setSuit:@"♣"];
+//    [cardB setSuit:@"♥"];
+//    [cardC setSuit:@"♠"];
+//    //[cardC setSuit:@"♠"];
+//    [cardA setRank:10];
+//    [cardB setRank:11];
+//    [cardC setRank:12];
+
+//    cardA.contents = @[cardB.contents, cardC.contents][[cardB match:@[cardC]] ? 1 : 0];
+//    
+//    NSLog(@"[[cardB match:@[cardC]] ? 1 : 0] : %@",@[cardA.contents, cardC.contents][[cardB match:@[cardC]] ? 1 : 0]);    
+//    NSLog(@"@[cardA.contents, cardB.contents][1] : %@",@[cardA.contents, cardB.contents][1]);
+//    
+//    NSLog(@"cardA.contents: %@",cardA.contents);
+//    NSLog(@"cardB.contents: %@",cardB.contents);
+//    NSLog(@"cardC.contents: %@",cardC.contents);
+//    
+//    cardA.contents = @[cardB.contents, cardC.contents][0];
+//    NSLog(@"cardA.contents: %@",cardA.contents);
+//    
+//    cardA.contents = cardC.contents;
+//    NSLog(@"cardA.contents: %@",cardA.contents);
+//    
+//    
+//    [cardA setContents:@[cardB.contents, cardC.contents][0]];
+//    NSLog(@"cardA.contents: %@",cardA.contents);
+//    
+//    cardA.contents = [cardB match:@[cardC]] ? cardC.contents : cardB.contents;
+//    NSLog(@"cardA.contents: %@",cardA.contents);
+//    
+//    cardA.contents = @"K♥";
+//    NSLog(@"cardA.contents: %@",cardA.contents);
+//    
+//    NSLog(@"[NSString stringWithFormat:@\"X\" cardB.contents]:%@",[NSString stringWithFormat:@"%@", cardB.contents]);
+//    
+//    cardA.contents = [NSString stringWithFormat:@"%@", cardB.contents];
+//    NSLog(@"cardA.contents: %@",cardA.contents);
+//    
+//    [cardA setSuit:@"♥"];
+//    NSLog(@"cardA.contents: %@",cardA.contents);
     
-    PlayingCard * cardA = [[PlayingCard alloc]init];
-    PlayingCard * cardB = [[PlayingCard alloc]init];
-    PlayingCard * cardC = [[PlayingCard alloc]init];
-    [cardA setSuit:@"♣"];
-    [cardB setSuit:@"♥"];
-    [cardC setSuit:@"♥"];
-    //[cardC setSuit:@"♠"];
-    [cardA setRank:10];
-    [cardB setRank:11];
-    [cardC setRank:12];
+    Card * cardA = [[Card alloc]init];
+    Card * cardB = [[Card alloc]init];
+    Card * cardC = [[Card alloc]init];
+    
+    [cardA setContents:@"mama"];
+    [cardB setContents:@"daniela"];
+    [cardC setContents:@"daniela"];
 
-
+    [cardA setContents:[NSString stringWithFormat:@"%@", cardB.contents]];
     cardA.contents = @[cardB.contents, cardC.contents][[cardB match:@[cardC]] ? 1 : 0];
-    
-    NSLog(@"cardA.contents: %@",cardA.contents);
-    NSLog(@"cardB.contents: %@",cardB.contents);
-    NSLog(@"cardC.contents: %@",cardC.contents);
-    
-    cardA.contents = @[cardB.contents, cardC.contents][0];
-    NSLog(@"cardA.contents: %@",cardA.contents);
-    
-    cardA.contents = cardC.contents;
-    NSLog(@"cardA.contents: %@",cardA.contents);
-    
-    
-    [cardA setContents:@[cardB.contents, cardC.contents][0]];
-    NSLog(@"cardA.contents: %@",cardA.contents);
-    
-    cardA.contents = [cardB match:@[cardC]] ? cardC.contents : cardB.contents;
-    NSLog(@"cardA.contents: %@",cardA.contents);
-    
-    cardA.contents = @"K♥";
-    NSLog(@"cardA.contents: %@",cardA.contents);
-    
-    cardA.contents = [NSString stringWithFormat:@"%@", cardB.contents];
-    NSLog(@"cardA.contents: %@",cardA.contents);
-    
-    [cardA setSuit:@"♠"];
     NSLog(@"cardA.contents: %@",cardA.contents);
     // Override point for customization after application launch.
     return YES;
