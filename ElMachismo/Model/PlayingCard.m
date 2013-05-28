@@ -12,15 +12,20 @@
 
 //TIP HW1
 //create a subclass with another match algorithm, is another game you know!!!
-- (int)match:(NSArray *)otherCards{
+- (int)match:(NSArray *)otherCards
+{
     int score = 0;
     if ( [otherCards count] == 1) {
         //lastObject never return out of bound, returns nil if empty
-        PlayingCard * otherCard = [otherCards lastObject];
-        if ([otherCard.suit isEqualToString:self.suit]) {
-            score = 1;
-        }else if (otherCard.rank == self.rank){
-            score = 4;
+        id otherCard = [otherCards lastObject];
+        if ([otherCard isKindOfClass:[PlayingCard class]]) {
+            PlayingCard * otherPlayingCard = (PlayingCard *)otherCard;
+            if ([otherPlayingCard.suit isEqualToString:self.suit]) {
+                score = 1;
+            }else if (otherPlayingCard.rank == self.rank){
+                score = 4;
+            }
+            
         }
     }
     return score;
