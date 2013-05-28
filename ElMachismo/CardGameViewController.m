@@ -22,6 +22,7 @@
 
 //MODEL - it's very frequent to have a property that points to the model
 @property (strong, nonatomic) CardMatchingGame                      *game;
+@property (weak, nonatomic) IBOutlet UILabel                        *scoreLabel;
 @end
 
 @implementation CardGameViewController
@@ -60,7 +61,7 @@
         cardButton.alpha = (card.isUnplayable ? 0.3 : 1.0);
     }
     
-//self.
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", [self.game score]];
 }
 
 
