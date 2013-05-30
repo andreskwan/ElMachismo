@@ -10,6 +10,9 @@
 
 @interface GameResult : NSObject
 
+//to turn GameResult into a property list of gameResults
++ (NSArray *)allGameResults;
+
 //when this class is instantiated the game start
 @property (readonly, nonatomic)NSDate           *start;
 
