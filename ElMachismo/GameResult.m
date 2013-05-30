@@ -39,7 +39,7 @@
 }
 
 //convenience initializer
-- initFromPropertyList:(id)plist
+-(id) initFromPropertyList:(id)plist
 {
     self = [self init];
     if (self) {
@@ -53,6 +53,7 @@
             }
         }
     }
+    return self;
 }
 
 - (NSTimeInterval) duration

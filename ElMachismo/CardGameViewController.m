@@ -64,6 +64,7 @@
 - (void)updateUI
 {
     for (UIButton * cardButton in self.cardButtons) {
+        //lazy instantiation of game if it is nil
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
         //the card did match but are not enable any more so we have to add
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
@@ -94,6 +95,18 @@
     [self updateUI];
     self.gameResult.score = self.game.score;
 }
+
+- (IBAction)dealButton {
+    self.game       = nil;
+    self.gameResult = nil;
+    self.flipcount  = 0;
+    [self updateUI];
+    //I don't need this
+    //because I have lazy instantiation for
+    //game property, it is used in [self updateUI]
+    //[self game];
+}
+
 
 
 
