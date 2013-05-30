@@ -10,6 +10,7 @@
 #import "Deck.h"
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
+#import "GameResult.h"
 
 @interface CardGameViewController ()
 //weak because this is displayed, this class do not control it
@@ -23,9 +24,20 @@
 //MODEL - it's very frequent to have a property that points to the model
 @property (strong, nonatomic) CardMatchingGame                      *game;
 @property (weak, nonatomic) IBOutlet UILabel                        *scoreLabel;
+
+@property (strong, nonatomic) GameResult                            *gameResult;
 @end
 
 @implementation CardGameViewController
+- (GameResult *)gameResult
+{
+    if (!_gameResult) {
+        _gameResult = [[GameResult alloc]init];
+        
+    }
+    return _gameResult;
+}
+
 
 - (CardMatchingGame *)game
 {
@@ -80,6 +92,7 @@
     self.flipcount++;
     //I have to update my ui every time I flip a card
     [self updateUI];
+    self.gameResult.score = self.game.score;
 }
 
 

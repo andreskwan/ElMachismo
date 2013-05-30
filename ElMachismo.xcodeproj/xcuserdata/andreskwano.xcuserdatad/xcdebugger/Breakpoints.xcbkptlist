@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ElMachismo/GameResult.m"
-         timestampString = "391620896.280203"
+         timestampString = "391624103.430369"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
          landmarkName = "-synchronize"
          landmarkType = "5">
       </FileBreakpoint>
