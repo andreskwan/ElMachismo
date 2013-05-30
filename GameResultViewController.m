@@ -7,6 +7,7 @@
 //
 
 #import "GameResultViewController.h"
+#import "GameResult.h"
 
 @interface GameResultViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *display;
@@ -14,6 +15,7 @@
 @end
 
 @implementation GameResultViewController
+
 -(void)setup
 {
     //initialization that can't wait until viewDidLoad
@@ -34,6 +36,18 @@
     return self;
 }
 
+- (void) updateUI
+{
+    NSString *displayText = @"";
+    for (GameResult *result in [GameResult allGameResults]) {
+        displayText = [displayText stringByAppendingFormat:@"Score: %d (%@, %0g)\n", result.score, result.end, round(result.duration)];
+    }
+    self.display.text = displayText;
+}
 
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self updateUI];
+}
 @end
