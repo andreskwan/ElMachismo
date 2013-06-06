@@ -30,6 +30,7 @@
 		EA49104517579C9B00EAC2A2 /* GameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49104417579C9B00EAC2A2 /* GameResultViewController.m */; };
 		EA49104B1757A1DE00EAC2A2 /* GameResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49104A1757A1DE00EAC2A2 /* GameResult.m */; };
 		EA50D2D6172AB263008F8CEE /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = EA50D2D5172AB263008F8CEE /* CardMatchingGame.m */; };
+		EA76FD361760596C0098116D /* back-rounded.png in Resources */ = {isa = PBXBuildFile; fileRef = EA76FD351760596C0098116D /* back-rounded.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		EA49104A1757A1DE00EAC2A2 /* GameResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameResult.m; path = ElMachismo/GameResult.m; sourceTree = "<group>"; };
 		EA50D2D4172AB263008F8CEE /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		EA50D2D5172AB263008F8CEE /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
+		EA76FD351760596C0098116D /* back-rounded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-rounded.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		EA4487C217264683005C6F30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA76FD351760596C0098116D /* back-rounded.png */,
 				EA464F5E175FCFE7001A204D /* cloth2.jpg */,
 				EA464F5C175FC67E001A204D /* cloth.jpg */,
 				EA464F58175F95B6001A204D /* back.png */,
@@ -228,6 +231,7 @@
 				EA464F59175F95B6001A204D /* back.png in Resources */,
 				EA464F5D175FC67E001A204D /* cloth.jpg in Resources */,
 				EA464F5F175FCFE7001A204D /* cloth2.jpg in Resources */,
+				EA76FD361760596C0098116D /* back-rounded.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

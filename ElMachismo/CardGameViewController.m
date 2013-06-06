@@ -38,8 +38,11 @@
 @implementation CardGameViewController
 //where should go this value??
 
-  CGFloat cgFontSize = 15.0;
-
+    CGFloat cgFontSize = 15.0;
+    CGFloat top    = 0;
+    CGFloat left   = 0;
+    CGFloat bottom = 0;
+    CGFloat right  = 0;
 - (GameResult *)gameResult
 {
     if (!_gameResult) {
@@ -60,12 +63,11 @@
 
 }
 
-
 - (void)setCardButtons:(NSArray *)cardButtons
 {
     //its kind of magic hear how cardButtons are instantiated!!! Now I understand!
     _cardButtons = cardButtons;
-    UIImage *cardBackImage = [UIImage imageNamed:@"back.png"];
+    UIImage *cardBackImage = [UIImage imageNamed:@"back-rounded.png"];
     
     UIImage *blank = [[UIImage alloc] init];
     
@@ -74,8 +76,8 @@
         [cardButton setImage:cardBackImage forState:UIControlStateNormal];
         [cardButton setImage:blank forState:UIControlStateSelected];
         [cardButton setImage:blank forState:UIControlStateSelected|UIControlStateDisabled];
+        [cardButton setImageEdgeInsets:UIEdgeInsetsMake(top, left, bottom, right)];
     }
-    
     [self updateUI];
     
 }
