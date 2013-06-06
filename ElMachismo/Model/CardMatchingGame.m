@@ -10,6 +10,7 @@
 
 @interface CardMatchingGame()
 @property (readwrite, nonatomic) int        score;
+@property (readwrite, nonatomic) NSString   *sLastFlip;
 @property (strong,nonatomic) NSMutableArray * cards; //just for card
 
 @end
@@ -29,8 +30,6 @@
 //the gust of the app
 - (void)flipCardAtIndex:(NSUInteger)index
 {
-  
-    
     Card * card = [self cardAtIndex:index];
     
     if (!card.isUnplayable) {
@@ -43,11 +42,16 @@
                         otherCard.unpleyable = YES;
                         card.unpleyable = YES;
                         self.score += matchScore * MATCH_BONUS;
+                        self.sLastFlip = [NSString stringWithFormat:@"Matched %@ & %@ for %d pts", card.contents, otherCard.contents, MATCH_BONUS];
                     }else{
                         otherCard.faceUp = NO;
                         self.score += matchScore * MISMATCH_PENALTY;
+                        self.sLastFlip = [NSString stringWithFormat:@"%@ & %@ don't match! %d pts penalty", card.contents, otherCard.contents, MISMATCH_PENALTY];
+
                     }
                     break;
+                }else{
+                    self.sLastFlip = [NSString stringWithFormat:@"Flipped up %@", card.contents];
                 }
             }
         }
@@ -62,6 +66,11 @@
     return (index < [self.cards count]) ? self.cards [index] : nil;
 }
 
+- (NSString *) sLastFlip
+{
+    if(!_sLastFlip) _sLastFlip = [NSString stringWithFormat:@"None Fliped"];
+        return _sLastFlip;
+}
 //draw out cards from the deck
 //and store them is an structure
 //which hold the playable cards
@@ -90,4 +99,5 @@
     }
     return self;
 }
+
 @end

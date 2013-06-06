@@ -12,7 +12,9 @@
 #import "CardMatchingGame.h"
 #import "GameResult.h"
 
-@interface CardGameViewController ()
+@interface CardGameViewController (){
+  
+}
 //weak because this is displayed, this class do not control it
 //is strong by the view
 @property (weak, nonatomic) IBOutlet UILabel                        *flipsLabel;
@@ -24,11 +26,20 @@
 //MODEL - it's very frequent to have a property that points to the model
 @property (strong, nonatomic) CardMatchingGame                      *game;
 @property (weak, nonatomic) IBOutlet UILabel                        *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel                        *lastFlipLabel;
 
 @property (strong, nonatomic) GameResult                            *gameResult;
+
+
+
+//@property (weak, nonatomic) UIButton
 @end
 
 @implementation CardGameViewController
+//where should go this value??
+
+  CGFloat cgFontSize = 15.0;
+
 - (GameResult *)gameResult
 {
     if (!_gameResult) {
@@ -54,6 +65,17 @@
 {
     //its kind of magic hear how cardButtons are instantiated!!! Now I understand!
     _cardButtons = cardButtons;
+    UIImage *cardBackImage = [UIImage imageNamed:@"back.png"];
+    
+    UIImage *blank = [[UIImage alloc] init];
+    
+    for (UIButton *cardButton in cardButtons)
+    {
+        [cardButton setImage:cardBackImage forState:UIControlStateNormal];
+        [cardButton setImage:blank forState:UIControlStateSelected];
+        [cardButton setImage:blank forState:UIControlStateSelected|UIControlStateDisabled];
+    }
+    
     [self updateUI];
     
 }
@@ -63,18 +85,22 @@
 //common paradime
 - (void)updateUI
 {
+    
     for (UIButton * cardButton in self.cardButtons) {
         //lazy instantiation of game if it is nil
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
-        //the card did match but are not enable any more so we have to add
+
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
+        
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable;
-        cardButton.alpha = (card.isUnplayable ? 0.3 : 1.0);
+        cardButton.alpha = (card.isUnplayable ? 0.5 : 1.0);
     }
     
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", [self.game score]];
+    self.lastFlipLabel.font = [UIFont systemFontOfSize:cgFontSize];
+    self.lastFlipLabel.text = [NSString stringWithFormat:@"%@", self.game.sLastFlip];
 }
 
 
@@ -107,6 +133,12 @@
     //[self game];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cloth2.jpg"]];
+    self.lastFlipLabel.text = [NSString stringWithFormat:@"%@", self.game.sLastFlip];
+}
 
 
 

@@ -23,6 +23,10 @@
 		EA4487E917264E84005C6F30 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E817264E84005C6F30 /* Deck.m */; };
 		EA44881F17295781005C6F30 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44881E17295781005C6F30 /* PlayingCard.m */; };
 		EA448822172968E7005C6F30 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA448821172968E7005C6F30 /* PlayingCardDeck.m */; };
+		EA464F57175F912C001A204D /* IMG_2183.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EA464F56175F912C001A204D /* IMG_2183.JPG */; };
+		EA464F59175F95B6001A204D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = EA464F58175F95B6001A204D /* back.png */; };
+		EA464F5D175FC67E001A204D /* cloth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA464F5C175FC67E001A204D /* cloth.jpg */; };
+		EA464F5F175FCFE7001A204D /* cloth2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA464F5E175FCFE7001A204D /* cloth2.jpg */; };
 		EA49104517579C9B00EAC2A2 /* GameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49104417579C9B00EAC2A2 /* GameResultViewController.m */; };
 		EA49104B1757A1DE00EAC2A2 /* GameResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49104A1757A1DE00EAC2A2 /* GameResult.m */; };
 		EA50D2D6172AB263008F8CEE /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = EA50D2D5172AB263008F8CEE /* CardMatchingGame.m */; };
@@ -54,6 +58,10 @@
 		EA44881E17295781005C6F30 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 		EA448820172968E7005C6F30 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		EA448821172968E7005C6F30 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		EA464F56175F912C001A204D /* IMG_2183.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2183.JPG; sourceTree = "<group>"; };
+		EA464F58175F95B6001A204D /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		EA464F5C175FC67E001A204D /* cloth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloth.jpg; sourceTree = "<group>"; };
+		EA464F5E175FCFE7001A204D /* cloth2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloth2.jpg; sourceTree = "<group>"; };
 		EA49104317579C9B00EAC2A2 /* GameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultViewController.h; sourceTree = "<group>"; };
 		EA49104417579C9B00EAC2A2 /* GameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultViewController.m; sourceTree = "<group>"; };
 		EA4910491757A1DE00EAC2A2 /* GameResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameResult.h; path = ElMachismo/GameResult.h; sourceTree = "<group>"; };
@@ -122,6 +130,10 @@
 		EA4487C217264683005C6F30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA464F5E175FCFE7001A204D /* cloth2.jpg */,
+				EA464F5C175FC67E001A204D /* cloth.jpg */,
+				EA464F58175F95B6001A204D /* back.png */,
+				EA464F56175F912C001A204D /* IMG_2183.JPG */,
 				EA4487D617264683005C6F30 /* MainStoryboard_iPad.storyboard */,
 				EA4487CA17264683005C6F30 /* machismoAppDelegate.h */,
 				EA4487CB17264683005C6F30 /* machismoAppDelegate.m */,
@@ -212,6 +224,10 @@
 				EA4487D217264683005C6F30 /* Default-568h@2x.png in Resources */,
 				EA4487D517264683005C6F30 /* MainStoryboard_iPhone.storyboard in Resources */,
 				EA4487D817264683005C6F30 /* MainStoryboard_iPad.storyboard in Resources */,
+				EA464F57175F912C001A204D /* IMG_2183.JPG in Resources */,
+				EA464F59175F95B6001A204D /* back.png in Resources */,
+				EA464F5D175FC67E001A204D /* cloth.jpg in Resources */,
+				EA464F5F175FCFE7001A204D /* cloth2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

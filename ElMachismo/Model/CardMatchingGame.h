@@ -45,5 +45,6 @@
 //it's only a public getter
 //nobody should change the score
 @property (readonly, nonatomic) int           score;
+@property (readonly, nonatomic) NSString      *sLastFlip;
 
 @end
