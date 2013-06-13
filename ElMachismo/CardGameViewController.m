@@ -11,9 +11,10 @@
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 #import "GameResult.h"
+#import "machismoAppDelegate.h"
 
 @interface CardGameViewController (){
-  
+    
 }
 //weak because this is displayed, this class do not control it
 //is strong by the view
@@ -38,11 +39,11 @@
 @implementation CardGameViewController
 //where should go this value??
 
-    CGFloat cgFontSize = 15.0;
-    CGFloat top    = 0;
-    CGFloat left   = 0;
-    CGFloat bottom = 0;
-    CGFloat right  = 0;
+CGFloat cgFontSize = 15.0;
+CGFloat top    = 0;
+CGFloat left   = 0;
+CGFloat bottom = 0;
+CGFloat right  = 0;
 - (GameResult *)gameResult
 {
     if (!_gameResult) {
@@ -55,12 +56,12 @@
 
 - (CardMatchingGame *)game
 {
-//    NSLog(@"[self.cardButtons count]: %d",[self.cardButtons count]);
+    //    NSLog(@"[self.cardButtons count]: %d",[self.cardButtons count]);
     //no strong pointer to the deck, is just needed to take the playing cards, no more
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
-                                                         usingDeck:[[PlayingCardDeck alloc]init]];
+                                                          usingDeck:[[PlayingCardDeck alloc]init]];
     return _game;
-
+    
 }
 
 - (void)setCardButtons:(NSArray *)cardButtons
@@ -91,7 +92,7 @@
     for (UIButton * cardButton in self.cardButtons) {
         //lazy instantiation of game if it is nil
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
-
+        
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
         
@@ -124,24 +125,51 @@
     self.gameResult.score = self.game.score;
 }
 
-- (IBAction)dealButton {
-    self.game       = nil;
-    self.gameResult = nil;
-    self.flipcount  = 0;
-    [self updateUI];
-    //I don't need this
-    //because I have lazy instantiation for
-    //game property, it is used in [self updateUI]
-    //[self game];
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cloth2.jpg"]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cloth2.jpg"]];
     self.lastFlipLabel.text = [NSString stringWithFormat:@"%@", self.game.sLastFlip];
 }
 
 
+#pragma mark deal button related
+- (void)newGame
+{
+    self.game       = nil;
+    self.gameResult = nil;
+    self.flipcount  = 0;
+    
+}
+- (IBAction)dealButton {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:@"Are you sure you want to restart the game?"
+                                  delegate:self
+                                  cancelButtonTitle:@"No Way!"
+                                  destructiveButtonTitle:@"Yes, I'm Sure"
+                                  otherButtonTitles:nil, nil];
+    
+    actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
+    [actionSheet showInView:[[[UIApplication sharedApplication] windows] objectAtIndex:0]];
+}
+
+- (void) actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"option 1");
+            [self newGame];
+            [self updateUI];
+            break;
+        case 1:
+            NSLog(@"option 3");
+            break;
+            
+        default:
+            NSLog(@"option default");
+            break;
+    }
+}
 
 @end

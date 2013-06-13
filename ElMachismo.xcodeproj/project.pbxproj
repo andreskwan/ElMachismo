@@ -121,6 +121,8 @@
 		EA4487C117264683005C6F30 /* ElMachismo */ = {
 			isa = PBXGroup;
 			children = (
+				EA4487CA17264683005C6F30 /* machismoAppDelegate.h */,
+				EA4487CB17264683005C6F30 /* machismoAppDelegate.m */,
 				EA4487D317264683005C6F30 /* MainStoryboard_iPhone.storyboard */,
 				EA4487D917264683005C6F30 /* CardGameViewController.h */,
 				EA4487DA17264683005C6F30 /* CardGameViewController.m */,
@@ -132,14 +134,12 @@
 		EA4487C217264683005C6F30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA4487D617264683005C6F30 /* MainStoryboard_iPad.storyboard */,
 				EA76FD351760596C0098116D /* back-rounded.png */,
 				EA464F5E175FCFE7001A204D /* cloth2.jpg */,
 				EA464F5C175FC67E001A204D /* cloth.jpg */,
 				EA464F58175F95B6001A204D /* back.png */,
 				EA464F56175F912C001A204D /* IMG_2183.JPG */,
-				EA4487D617264683005C6F30 /* MainStoryboard_iPad.storyboard */,
-				EA4487CA17264683005C6F30 /* machismoAppDelegate.h */,
-				EA4487CB17264683005C6F30 /* machismoAppDelegate.m */,
 				EA4487C317264683005C6F30 /* ElMachismo-Info.plist */,
 				EA4487C417264683005C6F30 /* InfoPlist.strings */,
 				EA4487C717264683005C6F30 /* main.m */,
