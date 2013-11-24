@@ -12,8 +12,8 @@
 
 @property (strong, nonatomic) NSString            * contents;
 
-@property (strong, getter = isChosen) BOOL        chosen;
-@property (strong, getter = isChosen) BOOL        matched;
+@property (nonatomic, getter = isChosen) BOOL        chosen;
+@property (nonatomic, getter = ismatched) BOOL       matched;
 
 
 @property (nonatomic, getter = isFaceUp) BOOL     faceUp;
