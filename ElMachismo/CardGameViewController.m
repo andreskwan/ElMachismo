@@ -26,6 +26,11 @@
 
 - (IBAction)touchCardButton:(UIButton *)sender {
 
+    
+    UIImage * cardImage = [UIImage imageNamed:@"cardback"];
+    [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
+    
+
 }
 
 
