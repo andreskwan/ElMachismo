@@ -26,11 +26,16 @@
 
 - (IBAction)touchCardButton:(UIButton *)sender {
 
-    
-    UIImage * cardImage = [UIImage imageNamed:@"cardback"];
-    [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
-    
-    [sender setTitle:@"" forState:UIControlStateNormal];
+    //if non zero front is showing
+    if ([sender.currentTitle length]) {
+        UIImage * cardImage = [UIImage imageNamed:@"cardback"];
+        [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
+        [sender setTitle:@"" forState:UIControlStateNormal];
+    }else{
+        UIImage * cardImage = [UIImage imageNamed:@"cardfront"];
+        [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
+        [sender setTitle:@"A♣" forState:UIControlStateNormal];
+    }
 }
 
 
