@@ -28,9 +28,10 @@
 //
 //return:
 //id "object of any (unkown) class
+//an object that which will be the same type as the object that this message was sent to.
 //
 //init is the constructor
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if(self){
