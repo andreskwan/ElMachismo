@@ -23,6 +23,7 @@
 		EA4487E917264E84005C6F30 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E817264E84005C6F30 /* Deck.m */; };
 		EA44881F17295781005C6F30 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44881E17295781005C6F30 /* PlayingCard.m */; };
 		EA448822172968E7005C6F30 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA448821172968E7005C6F30 /* PlayingCardDeck.m */; };
+		EAAA89D41842624F00A48DB6 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAA89D31842624F00A48DB6 /* images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		EA44881E17295781005C6F30 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 		EA448820172968E7005C6F30 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		EA448821172968E7005C6F30 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		EAAA89D31842624F00A48DB6 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		EA4487AF17264683005C6F30 = {
 			isa = PBXGroup;
 			children = (
+				EAAA89D31842624F00A48DB6 /* images.xcassets */,
 				EA4487EA17264E8D005C6F30 /* Model */,
 				EA4487C117264683005C6F30 /* ElMachismo */,
 				EA4487BA17264683005C6F30 /* Frameworks */,
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA4487C617264683005C6F30 /* InfoPlist.strings in Resources */,
+				EAAA89D41842624F00A48DB6 /* images.xcassets in Resources */,
 				EA4487CE17264683005C6F30 /* Default.png in Resources */,
 				EA4487D017264683005C6F30 /* Default@2x.png in Resources */,
 				EA4487D217264683005C6F30 /* Default-568h@2x.png in Resources */,
@@ -348,6 +352,7 @@
 				EA4487E017264683005C6F30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
