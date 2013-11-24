@@ -30,7 +30,7 @@
     UIImage * cardImage = [UIImage imageNamed:@"cardback"];
     [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
     
-
+    [sender setTitle:@"" forState:UIControlStateNormal];
 }
 
 
