@@ -21,7 +21,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="lNz-1k-yrQ"/>
+                                    <action selector="touchCardButton:" destination="2" eventType="touchUpInside" id="cGl-Yx-loQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v3c-Ja-i4m">

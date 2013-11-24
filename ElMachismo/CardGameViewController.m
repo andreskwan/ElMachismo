@@ -24,5 +24,9 @@
     sender.selected = !sender.isSelected;
 }
 
+- (IBAction)touchCardButton:(UIButton *)sender {
+
+}
+
 
 @end
