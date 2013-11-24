@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Machismo View Controller-->
+        <!--Card Game View Controller-->
         <scene sceneID="4">
             <objects>
-                <viewController id="2" customClass="machismoViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="CardGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="azC-cU-NlE"/>
                         <viewControllerLayoutGuide type="bottom" id="MWe-YW-cbp"/>

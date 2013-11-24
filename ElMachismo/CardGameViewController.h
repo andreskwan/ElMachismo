@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface machismoViewController : UIViewController
+@interface CardGameViewController : UIViewController
 
 @end
