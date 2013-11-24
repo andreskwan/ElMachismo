@@ -37,10 +37,6 @@
     }
 }
 
-+ (NSArray *)validSuits
-{
-    return @[@"♥", @"♦",@"♠",@"♣"];
-}
 
 #pragma mark rank property
 - (void)setRank:(NSUInteger)rank
@@ -50,11 +46,17 @@
     }
 }
 
+#pragma mark - Class methods
+//those that are independent of the instance
 + (NSArray *)rankStrings
 {
     return @[@"?", @"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"J",@"Q",@"K"];
 }
 
++ (NSArray *)validSuits
+{
+    return @[@"♥", @"♦",@"♠",@"♣"];
+}
 
 + (NSUInteger)maxRank { return [self rankStrings].count - 1;}
 
