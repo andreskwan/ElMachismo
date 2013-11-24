@@ -8,6 +8,7 @@
 
 #import "Deck.h"
 @interface Deck()
+// private, we don't want none cheating with our cards
 //strong no one should point at it
 //mutable because we are going to add things to it
 @property (strong, nonatomic) NSMutableArray *cards;
@@ -45,6 +46,12 @@
             [self.cards addObject:card];
         }
     }
+}
+
+- (void)addCard:(Card *)card
+{
+    
+    [self addCard:card atTop:NO];
 }
 
 - (Card *)drawRandomCard
