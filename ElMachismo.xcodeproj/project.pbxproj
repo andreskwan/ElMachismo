@@ -24,6 +24,7 @@
 		EA44881F17295781005C6F30 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44881E17295781005C6F30 /* PlayingCard.m */; };
 		EA448822172968E7005C6F30 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA448821172968E7005C6F30 /* PlayingCardDeck.m */; };
 		EAAA89D41842624F00A48DB6 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAA89D31842624F00A48DB6 /* images.xcassets */; };
+		EAAA89D718430B7900A48DB6 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAA89D618430B7900A48DB6 /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		EA448820172968E7005C6F30 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		EA448821172968E7005C6F30 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
 		EAAA89D31842624F00A48DB6 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		EAAA89D518430B7900A48DB6 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
+		EAAA89D618430B7900A48DB6 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				EA448821172968E7005C6F30 /* PlayingCardDeck.m */,
 				EA44881D17295781005C6F30 /* PlayingCard.h */,
 				EA44881E17295781005C6F30 /* PlayingCard.m */,
+				EAAA89D518430B7900A48DB6 /* CardMatchingGame.h */,
+				EAAA89D618430B7900A48DB6 /* CardMatchingGame.m */,
 				EA4487E417264A31005C6F30 /* Card.h */,
 				EA4487E517264A31005C6F30 /* Card.m */,
 				EA4487E717264E84005C6F30 /* Deck.h */,
@@ -215,6 +220,7 @@
 				EA4487CC17264683005C6F30 /* machismoAppDelegate.m in Sources */,
 				EA4487DB17264683005C6F30 /* CardGameViewController.m in Sources */,
 				EA4487E617264A31005C6F30 /* Card.m in Sources */,
+				EAAA89D718430B7900A48DB6 /* CardMatchingGame.m in Sources */,
 				EA4487E917264E84005C6F30 /* Deck.m in Sources */,
 				EA44881F17295781005C6F30 /* PlayingCard.m in Sources */,
 				EA448822172968E7005C6F30 /* PlayingCardDeck.m in Sources */,

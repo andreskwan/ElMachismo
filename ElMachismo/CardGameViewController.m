@@ -33,27 +33,23 @@
 
 - (IBAction)touchCardButton:(UIButton *)sender {
     
-    NSInteger cardsLeftInDeck = 96;
-    
-    if (cardsLeftInDeck - self.flipcount) {
-        //if non zero front is showing
+           //if non zero front is showing
         if ([sender.currentTitle length])
         {
             UIImage * cardImage = [UIImage imageNamed:@"cardback"];
             [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
             [sender setTitle:@"" forState:UIControlStateNormal];
         }else{
-            UIImage * cardImage = [UIImage imageNamed:@"cardfront"];
-            [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
-            [sender setTitle:[[self.deck drawRandomCard] contents]
-                    forState:UIControlStateNormal];
+            Card * randomCard = [self.deck drawRandomCard];
+            if (randomCard) {
+                UIImage * cardImage = [UIImage imageNamed:@"cardfront"];
+                [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
+                [sender setTitle:[randomCard contents]
+                        forState:UIControlStateNormal];
+            }
         }
         self.flipcount++;
-    }else{
-        UIImage * cardImage = [UIImage imageNamed:@"cardback"];
-        [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
-        [sender setTitle:@"" forState:UIControlStateNormal];
-    }
+    
 }
 
 #pragma mark deck methods
