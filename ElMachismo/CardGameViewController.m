@@ -19,9 +19,10 @@
 
 @implementation CardGameViewController
 
-- (IBAction)flipCard:(UIButton *)sender
+- (void) setFlipcount:(int)flipcount
 {
-    sender.selected = !sender.isSelected;
+    _flipcount = flipcount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipcount];
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
@@ -36,6 +37,7 @@
         [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
         [sender setTitle:@"A♣" forState:UIControlStateNormal];
     }
+    self.flipcount++;
 }
 
 
