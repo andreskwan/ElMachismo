@@ -16,7 +16,7 @@
     //control what to display at 0-?, 10-J, 11-Q, 12-K
     NSArray *rankStrings = [PlayingCard rankStrings];
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
-   
+    
 }
 
 #pragma mark suit property
@@ -38,7 +38,7 @@
 }
 
 
-#pragma mark rank property
+#pragma mark properties
 - (void)setRank:(NSUInteger)rank
 {
     if (rank <= [PlayingCard maxRank]) {
@@ -60,5 +60,36 @@
 
 + (NSUInteger)maxRank { return [self rankStrings].count - 1;}
 
+#pragma mark overriding
 
+- (int)match:(NSArray *)otherCards
+{
+    int score = 0;
+    //not taking care of the contents of the array!!!
+    
+    if ([otherCards count] == 1){
+        PlayingCard * otherCard = [otherCards firstObject];
+        if (otherCard.rank == self.rank) {
+            score = 4;
+        }else if( [otherCard.suit isEqualToString:self.suit]){
+            score = 1;
+        }
+    }
+    return score;
+}
+
+- (int)matchWithManyCards:(NSArray *)otherCards
+{
+    int score = 0;
+    //not taking care of the contents of the array!!!
+    
+    for (PlayingCard * otherCard in otherCards) {
+        if (otherCard.rank == self.rank) {
+            score = 4;
+        }else if( [otherCard.suit isEqualToString:self.suit]){
+            score = 1;
+        }
+    }
+    return score;
+}
 @end
