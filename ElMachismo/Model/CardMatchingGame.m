@@ -34,7 +34,6 @@
                 self = nil;
                 break;
             }
-            
         }
     }
     return self;
@@ -43,6 +42,11 @@
 -(Card *) cardAtIndex:(NSUInteger)index
 {
     return (index < [self.cards count]) ? self.cards[index] : nil;
+}
+
+- (void) chooseCardAtIndex:(NSUInteger)index
+{
+    
 }
 
 @end
