@@ -22,7 +22,7 @@
 
 - (NSMutableArray *) cards
 {
-    if (_cards) _cards = [[NSMutableArray alloc]init];
+    if (!_cards) _cards = [[NSMutableArray alloc]init];
     return _cards;
 }
 
@@ -35,6 +35,9 @@
             Card * card = [deck drawRandomCard];
             if (card) {
                 [self.cards addObject:card];
+                NSLog(@"card contents: %@ ",card.contents);
+
+                NSLog(@"[self.cards objectAtIndex:i] : %@",[self.cards lastObject]);
             }else{
                 self = nil;
                 break;
