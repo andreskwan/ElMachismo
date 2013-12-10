@@ -23,6 +23,7 @@
 		EA4487E917264E84005C6F30 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4487E817264E84005C6F30 /* Deck.m */; };
 		EA44881F17295781005C6F30 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44881E17295781005C6F30 /* PlayingCard.m */; };
 		EA448822172968E7005C6F30 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EA448821172968E7005C6F30 /* PlayingCardDeck.m */; };
+		EA9E37251857382A00846401 /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E37241857382A00846401 /* PlayingCardGameViewController.m */; };
 		EAAA89D41842624F00A48DB6 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAA89D31842624F00A48DB6 /* images.xcassets */; };
 		EAAA89D718430B7900A48DB6 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAA89D618430B7900A48DB6 /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		EA44881E17295781005C6F30 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 		EA448820172968E7005C6F30 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		EA448821172968E7005C6F30 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		EA9E37231857382A00846401 /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardGameViewController.h; path = ElMachismo/PlayingCardGameViewController.h; sourceTree = "<group>"; };
+		EA9E37241857382A00846401 /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardGameViewController.m; path = ElMachismo/PlayingCardGameViewController.m; sourceTree = "<group>"; };
 		EAAA89D31842624F00A48DB6 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		EAAA89D518430B7900A48DB6 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		EAAA89D618430B7900A48DB6 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 		EA4487AF17264683005C6F30 = {
 			isa = PBXGroup;
 			children = (
+				EA9E37231857382A00846401 /* PlayingCardGameViewController.h */,
+				EA9E37241857382A00846401 /* PlayingCardGameViewController.m */,
 				EAAA89D31842624F00A48DB6 /* images.xcassets */,
 				EA4487EA17264E8D005C6F30 /* Model */,
 				EA4487C117264683005C6F30 /* ElMachismo */,
@@ -224,6 +229,7 @@
 				EA4487E917264E84005C6F30 /* Deck.m in Sources */,
 				EA44881F17295781005C6F30 /* PlayingCard.m in Sources */,
 				EA448822172968E7005C6F30 /* PlayingCardDeck.m in Sources */,
+				EA9E37251857382A00846401 /* PlayingCardGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

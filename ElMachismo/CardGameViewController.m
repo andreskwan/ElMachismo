@@ -9,7 +9,6 @@
 #import "CardGameViewController.h"
 #import "Deck.h"
 #import "PlayingCardDeck.h"
-#import "PlayingCard.h"
 #import "CardMatchingGame.h"
 
 @interface CardGameViewController ()
@@ -36,9 +35,13 @@
 }
 
 #pragma mark deck methods
+//we made this class abstract by returning nill
+//so we have to subclass and make a concrete class
+// wich means do no return nil
+// - we have to make public this method
 - (Deck *)createDeck
 {
-    return [[PlayingCardDeck alloc]init];
+    return nil;
 }
 
 - (void) updateUI
